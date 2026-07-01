@@ -15,7 +15,7 @@ A1 by gemini
 #!/bin/bash
 
 # 対象となるpccフォルダのパス（カレントディレクトリにpccがある場合）
-TARGET_DIR="../../../pcc"
+TARGET_DIR="./pcc"
 OUTPUT_DIR="./doxygen_output"
 
 # 1. 各種ツールの存在チェック
