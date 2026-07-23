@@ -134,3 +134,34 @@ hint: invocation.
 
 fatal: Need to specify how to reconcile divergent branches.
 
+## git rebase
+root@4d68184e0d21:/tmp/osek# git config pull.rebase false
+root@4d68184e0d21:/tmp/osek# git config pull.rebase true
+root@4d68184e0d21:/tmp/osek#   git config pull.ff only
+root@4d68184e0d21:/tmp/osek# git pull
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint:
+hint:   git merge --no-ff
+hint:
+hint: or:
+hint:
+hint:   git rebase
+hint:
+hint: Disable this message with "git config advice.diverging false"
+fatal: Not possible to fast-forward, aborting.
+root@4d68184e0d21:/tmp/osek# git rebase
+Successfully rebased and updated refs/heads/main.
+root@4d68184e0d21:/tmp/osek# git pull
+Already up to date.
+root@4d68184e0d21:/tmp/osek# git push
+Username for 'https://github.com': nagoyakaizen-star
+Password for 'https://nagoyakaizen-star@github.com':
+Enumerating objects: 255, done.
+Counting objects: 100% (255/255), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (138/138), done.
+Writing objects: 100% (144/144), 120.65 KiB | 393.00 KiB/s, done.
+Total 144 (delta 108), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (108/108), completed with 60 local objects.
+To https://github.com/nagoyakaizen-star/OSEK.git
+   5c2a405..ce9bc5c  main -> main
